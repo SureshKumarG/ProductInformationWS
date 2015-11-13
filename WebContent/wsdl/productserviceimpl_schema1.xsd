@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://service.insurance.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://service.insurance.com/" version="1.0">
+<xs:element name="getProductInformation" type="tns:getProductInformation"/>
+<xs:element name="getProductInformationResponse" type="tns:getProductInformationResponse"/>
+<xs:element name="getProductName" type="tns:getProductName"/>
+<xs:element name="getProductNameResponse" type="tns:getProductNameResponse"/>
+<xs:complexType name="getProductInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getProductInformationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:product"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="product">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="price" type="xs:string"/>
+      <xs:element minOccurs="0" name="productId" type="xs:string"/>
+      <xs:element minOccurs="0" name="productName" type="xs:string"/>
+      <xs:element minOccurs="0" name="productType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getProductName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getProductNameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

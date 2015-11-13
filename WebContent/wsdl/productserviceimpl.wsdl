@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ProductServiceImplService" targetNamespace="http://service.insurance.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.insurance.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://service.insurance.com/" schemaLocation="productserviceimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getProductInformationResponse">
+    <wsdl:part name="parameters" element="tns:getProductInformationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductInformation">
+    <wsdl:part name="parameters" element="tns:getProductInformation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductNameResponse">
+    <wsdl:part name="parameters" element="tns:getProductNameResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductName">
+    <wsdl:part name="parameters" element="tns:getProductName">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProductServiceImpl">
+    <wsdl:operation name="getProductInformation">
+      <wsdl:input name="getProductInformation" message="tns:getProductInformation">
+    </wsdl:input>
+      <wsdl:output name="getProductInformationResponse" message="tns:getProductInformationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductName">
+      <wsdl:input name="getProductName" message="tns:getProductName">
+    </wsdl:input>
+      <wsdl:output name="getProductNameResponse" message="tns:getProductNameResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProductServiceImplServiceSoapBinding" type="tns:ProductServiceImpl">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getProductInformation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProductInformation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductInformationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductName">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProductName">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductNameResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductServiceImplService">
+    <wsdl:port name="ProductServiceImplPort" binding="tns:ProductServiceImplServiceSoapBinding">
+      <soap:address location="http://localhost:8080/ProductInformationWS/services/ProductServiceImplPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
