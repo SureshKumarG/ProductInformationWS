@@ -3,11 +3,13 @@
  */
 package com.insurance.beans;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author 210323
  *
  */
-//@XmlRootElement
+@Component
 public class Product {
 	
 	private String productId;
