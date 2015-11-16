@@ -10,11 +10,11 @@
 		<outputReports>${project.build.directory}/reports</outputReports>
 	</properties>
 
-	<scm>
+	<!-- <scm>
 		<connection>scm:git:git://github.com/SureshKumarG/ProductInformationWS.git</connection>
 		<developerConnection>scm:git:git://github.com/SureshKumarG/ProductInformationWS.git</developerConnection>
 		<url>https://github.com/SureshKumarG/ProductInformationWS</url>
-	</scm>
+	</scm>  -->
 
 	<distributionManagement>
 		<repository>
