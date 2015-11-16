@@ -84,6 +84,12 @@
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9</version>
 				<configuration>
@@ -190,7 +196,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	
+
 	<profiles>
 		<profile>
 			<id>sonar</id>
